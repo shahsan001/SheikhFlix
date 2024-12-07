@@ -1,0 +1,35 @@
+.footer {
+    background-color: #222; /* Dark theme background */
+    color: white;
+    border-top: 3px solid #FFD700;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .footer-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .footer-link:hover {
+    color: #FFD700; /* Highlight color on hover */
+  }
+  
+  .footer-social a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-social a:hover {
+    color: #FFD700;
+  }
+  
+  .footer-text {
+    font-size: 0.85rem;
+  }
+  

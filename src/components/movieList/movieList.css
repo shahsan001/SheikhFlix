@@ -1,0 +1,17 @@
+.movie__list {
+  background-color: black;
+  padding: 0 3rem 3rem 3rem;
+}
+
+.list__title {
+  color: white;
+  text-align: center;
+  font-size: 1.75rem;
+  padding: 2.5rem;
+}
+
+.list__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
