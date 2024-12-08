@@ -7,22 +7,20 @@ const Movie = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    getData();
-    window.scrollTo(0, 0);
-  }, []);
-
-  const getData = () => {
     fetch(
       `https://api.themoviedb.org/3/movie/${id}?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US`
     )
       .then((res) => res.json())
       .then((data) => setMovie(data));
-  };
+    
+    window.scrollTo(0, 0);
+  }, [id]);
+  
 
   return (
     <div className="movie">
       <div className="movie__intro">
-        <img
+        <img alt="Movie_Background_Img"
           className="movie__backdrop"
           src={`https://image.tmdb.org/t/p/original${
             currentMovieDetail ? currentMovieDetail.backdrop_path : ""
@@ -32,7 +30,7 @@ const Movie = () => {
       <div className="movie__detail">
         <div className="movie__detailLeft">
           <div className="movie__posterBox">
-            <img
+            <img alt="Movie_Poster_Img"
               className="movie__poster"
               src={`https://image.tmdb.org/t/p/original${
                 currentMovieDetail ? currentMovieDetail.poster_path : ""
@@ -89,6 +87,7 @@ const Movie = () => {
           <a
             href={currentMovieDetail.homepage}
             target="_blank"
+            rel="noreferrer"
             style={{ textDecoration: "none" }}
           >
             <p>
@@ -102,6 +101,7 @@ const Movie = () => {
           <a
             href={"https://www.imdb.com/title/" + currentMovieDetail.imdb_id}
             target="_blank"
+            rel="noreferrer"
             style={{ textDecoration: "none" }}
           >
             <p>
@@ -120,7 +120,7 @@ const Movie = () => {
             <>
               {company.logo_path && (
                 <span className="productionCompanyImage">
-                  <img
+                  <img alt="Movies_Production_Company_Logo"
                     className="movie__productionComapany"
                     src={
                       "https://image.tmdb.org/t/p/original" + company.logo_path
