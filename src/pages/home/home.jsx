@@ -21,14 +21,14 @@ const Home = () => {
       <div className="poster">
         <Carousel
           showThumbs={false}
-          autoPlay={true} // Enables autoplay
-          transitionTime={1000} // Transition time for each slide
+          autoPlay={true} 
+          transitionTime={1000}
           infiniteLoop={true}
           showStatus={false}
           swipeable={true}
           emulateTouch={true}
-          interval={7000} // Time each slide stays visible
-          stopOnHover={true} // Stops autoplay when user hovers over the carousel
+          interval={7000}
+          stopOnHover={true} 
         >
           {popularMovies.map((movie) => (
             <Link

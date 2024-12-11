@@ -82,7 +82,7 @@ const Movie = () => {
         </div>
       </div>
       <div className="movie__links">
-        <div className="movie__heading">Useful Links</div>
+        <div className="movie__heading">Useful Link</div>
         {currentMovieDetail && currentMovieDetail.homepage && (
           <a
             href={currentMovieDetail.homepage}
@@ -112,7 +112,7 @@ const Movie = () => {
           </a>
         )}
       </div>
-      <div className="movie__heading">Production companies</div>
+      <div className="movie__heading">Production companie</div>
       <div className="movie__production">
         {currentMovieDetail &&
           currentMovieDetail.production_companies &&

@@ -10,14 +10,11 @@ const Footer = () => {
             <i className="fab fa-facebook fa-lg mx-2"></i>
           </a>
           <a href="https://www.instagram.com/sh_ahsan_001/profilecard/?igsh=a2c5MXBubWlqZmdu" target="_blank" rel="noreferrer">
-            <i className="fab fa-twitter fa-lg mx-2"></i>
-          </a>
-          <a href="https://www.instagram.com/sh_ahsan_001/profilecard/?igsh=a2c5MXBubWlqZmdu" target="_blank" rel="noreferrer">
             <i className="fab fa-instagram fa-lg mx-2"></i>
           </a>
         </div>
         <div className="footer-text mt-3">
-          <p>SheikhFlix App © {new Date().getFullYear()}. All Rights Reserved. Design By: Sheikh Ahsan</p>
+          <p>SheikhFlix App © {new Date().getFullYear()}-2026. All Rights Reserved. Design By: Sheikh Ahsan</p>
         </div>
       </div>
     </footer>

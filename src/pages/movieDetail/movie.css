@@ -38,10 +38,6 @@
   bottom: 250px;
 }
 
-.movie__detailLeft {
-  margin-right: 30px;
-}
-
 .movie__poster {
   width: 300px;
   border-radius: 10px;
@@ -54,6 +50,7 @@
   display: flex;
   flex-direction: column;
   height: auto;
+  padding-left: 30px;
   justify-content: space-between;
 }
 
@@ -101,14 +98,20 @@
   position: relative;
   bottom: 120px;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 75%;
+  justify-content: center; /* Center align the content */
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 1rem; /* Add space between items */
+  width: 100%; /* Full width for better responsiveness */
+  margin: 0 auto; /* Center horizontally */
+  text-align: center;
 }
 
 .movie__heading {
   color: white;
   font-size: 2.2rem;
+  text-align: center; /* Center the heading */
+  width: 100%;
 }
 
 .movie__Button {
@@ -122,8 +125,10 @@
   color: black;
   font-weight: bold;
   font-size: 19px;
-  margin: 10px 0; /* Adds spacing on smaller screens */
+  margin: 10px; /* Adds spacing */
+  text-align: center;
 }
+
 
 .movie__homeButton {
   background-color: #f3ce13;
@@ -142,6 +147,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  gap: 10px;
   margin-bottom: 4rem;
   margin-top: 4rem;
   flex-wrap: wrap;
@@ -154,11 +160,13 @@
 }
 
 .productionCompanyImage {
+  background-color: white;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: black;
 }
 .syn-text {
   color: gray;
@@ -187,6 +195,14 @@
   .movie__name {
     font-size: 2.5rem;
   }
+  .movie__detailRight {
+    padding-left: 0px;
+  }
+  .movie__genre {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    margin-right: 0.8rem;
+  }
 }
 
 /* For screens smaller than 768px (mobile devices) */
@@ -212,9 +228,19 @@
     font-size: 16px;
     padding: 0.6rem 1.5rem;
   }
+  .movie__detailRight {
+    padding-left: 0px;
+  }
 
   .movie__production {
     margin-bottom: 2rem;
+  }
+  @media (max-width: 768px) {
+    .movie__genre {
+      padding: 6px 15px;
+      font-size: 0.8rem;
+      margin-right: 0.5rem;
+    }
   }
 }
 
@@ -245,5 +271,32 @@
   .movie__genre {
     padding: 0.3rem;
     font-size: 0.8rem;
+  }
+  @media (max-width: 480px) {
+    .movie__genre {
+      padding: 5px 10px;
+      font-size: 0.7rem;
+      margin-right: 0.4rem;
+      border-radius: 15px;
+    }
+  }
+  .movie__name{
+    padding-top: 15px;
+    font-size: 24px;
+  }
+  .movie__tagline{
+    font-size: 12px;
+  }
+  .movie__rating{
+    font-size: 12px;  
+  }
+  .movie__runtime{
+    font-size: 12px;
+  }
+  .movie__releaseDate{
+    font-size: 12px;
+  }
+  .syn-text{
+    font-size: 12px;
   }
 }

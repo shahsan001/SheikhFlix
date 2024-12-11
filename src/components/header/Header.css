@@ -5,40 +5,28 @@ img.header__icon {
   padding-top: 0px;
   padding-bottom: 0px;
 }
-.header{
+.header {
   background-color: black;
 }
-.ms-auto{
+
+.ms-auto {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 15px;
 }
 
 .ms-auto .nav-link {
-  position: relative; /* Position relative for pseudo-element */
+  position: relative;
   color: white;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.ms-auto .nav-link::after {
-  content: "";
-  position: absolute;
-  bottom: -5px; /* Adjusts spacing below the text */
-  left: 0;
-  width: 0; /* Starts with 0 width */
-  height: 3px; /* Thickness of underline */
-  background-color: #FFD700; /* Gold color */
-  border-radius: 5px; /* Curved border effect */
-  transition: width 0.3s ease; /* Smooth width animation */
+  transition: color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  border-radius: 5px;
+  padding: 5px 10px;
 }
 
 .ms-auto .nav-link:hover,
 .ms-auto .nav-link:focus {
-  color: #FFD700; /* Change text color on hover */
-}
-
-.ms-auto .nav-link:hover::after,
-.ms-auto .nav-link:focus::after {
-  width: 100%; /* Expands underline to full width */
+  color: #ffd700;
+  background-color: rgba(255, 215, 0, 0.2);
+  box-shadow: 0 0 10px 3px rgba(255, 215, 0, 0.5);
 }
